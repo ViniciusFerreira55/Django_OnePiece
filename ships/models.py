@@ -6,7 +6,7 @@ class AkumaNoMi(models.Model):
     descricao_akuma = models.TextField()
     foto_akuma = models.ImageField()
     def __str__(self):
-        return self.nome_personagem
+        return self.nome_akuma
 
 
 class Characters(models.Model):

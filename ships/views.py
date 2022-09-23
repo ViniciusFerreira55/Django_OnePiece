@@ -21,4 +21,9 @@ def characters(request, character_id):
     }
     return render(request, 'info.html', character_a_ser_exibido)
 
-
+def akumasNoMi(request, akumaNoMi_id):
+    akumaNoMi = get_object_or_404(AkumaNoMi, pk=akumaNoMi_id)
+    akumaNoMi_a_ser_exibido = {
+        'akumaNoMi' : akumaNoMi
+    }
+    return render(request, 'info2.html', akumaNoMi_a_ser_exibido)
