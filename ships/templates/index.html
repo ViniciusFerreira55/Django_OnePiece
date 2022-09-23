@@ -13,7 +13,7 @@
     <header>
         <div class="navbar">
             <ul>
-                <li><a>Home</a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
                 <li><a>News</a></li>
                 <li><a>Contact</a></li>
                 <li><a>About</a></li>
@@ -39,8 +39,10 @@
         {% for character in characters%}
         <div class="char2">
             <div class="grow">
+            <a href="{% url 'character' character.id %}">
             <h5>{{character.nome_personagem}}</h5>
             <img src="/media/{{character.foto}}" alt="zimbas" class="fotos">
+        </a>
         </div>
         </div>
         {% endfor %}
