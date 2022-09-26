@@ -66,7 +66,23 @@
     </div>
     </div>
     </div>
-
+    <div class="lanca">
+        <h1>Navios</h1>
+   <div class="copao">
+        <div class="char">
+        {% for navio in navios %}
+        <div class="char2">
+            <div class="grow">
+            <a href="{% url 'navio' navio.id %}">
+            <h5>{{navio.nome_navio}}</h5>
+            <img src="/media/{{navio.foto_navio}}" alt="zimbas3" class="fotos">
+        </a>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+    </div>
     
     
 

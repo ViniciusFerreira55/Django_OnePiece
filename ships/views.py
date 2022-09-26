@@ -10,9 +10,11 @@ def index(request):
 def index(request):
     character = Characters.objects.all()
     akumaNoMi = AkumaNoMi.objects.all()
+    navio = Navios.objects.all()
     dados = {
         'characters': character,
-        'akumaNoMis' : akumaNoMi
+        'akumaNoMis' : akumaNoMi,
+        'navios' : navio
     }
     return render(request, 'index.html', dados)
 

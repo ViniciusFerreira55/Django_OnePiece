@@ -13,7 +13,7 @@ class Characters(models.Model):
     nome_personagem = models.CharField(max_length=50)
     recompensa_personagem = models.CharField(max_length=50)
     tripulacao_personagem = models.CharField(max_length=50)
-    akumaNoMi_personagem = models.ForeignKey(AkumaNoMi, on_delete=models.DO_NOTHING)
+    akumaNoMi_personagem = models.ForeignKey(AkumaNoMi, on_delete=models.DO_NOTHING, blank=True, null=True)
     descricao_personagem = models.TextField()
     foto = models.ImageField()
     fotog = models.ImageField()
