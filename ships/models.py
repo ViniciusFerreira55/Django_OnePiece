@@ -16,8 +16,15 @@ class Characters(models.Model):
     akumaNoMi_personagem = models.ForeignKey(AkumaNoMi, on_delete=models.DO_NOTHING)
     descricao_personagem = models.TextField()
     foto = models.ImageField()
-    fotog = models.ImageField(null=True)
+    fotog = models.ImageField()
     def __str__(self):
         return self.nome_personagem
     
 
+class Navios(models.Model):
+    nome_navio = models.CharField(max_length=50)
+    nome_capitao = models.ForeignKey(Characters, on_delete=models.DO_NOTHING)
+    descricao_navio = models.TextField()
+    foto_navio = models.ImageField()
+    def __str__(self):
+        return self.nome_navio

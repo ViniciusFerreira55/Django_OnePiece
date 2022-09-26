@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from .models import Characters, AkumaNoMi
+from .models import Characters, AkumaNoMi, Navios
 
 
 def index(request):
@@ -29,3 +29,10 @@ def akumaNoMis(request, akumaNoMi_id):
         'akumaNoMi' : akumaNoMi
     }
     return render(request, 'info2.html', akumaNoMi_a_ser_exibido)
+
+def navios(request, navio_id):
+    navio = get_object_or_404(Navios, pk=navio_id)
+    navio_a_ser_exibido = {
+        'navio' : navio 
+    }
+    return render(request, 'info3.html', navio_a_ser_exibido)
