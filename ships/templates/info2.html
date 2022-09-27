@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css'  %}">
+    <title>One piece </title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="#personagens">Personagens</a></li>
+                <li><a href="#frutas">Akumas no Mi</a></li>
+                <li><a href="#navios">Navios</a></li>
+              </ul>
+        </div>
+    </header>
+   <div class="info_char">
+        <h1>{{ akumaNoMi.nome_akuma }}</h1>
+        <h2>Tipo: {{ akumaNoMi.tipo_akuma }}</h2>
+   </div>
+   <img src="/media/{{akumaNoMi.foto_akuma}}" alt="zimbas2" class="fotosI">
+
+   <div class="descricao">
+    <p>{{ akumaNoMi.descricao_akuma }}</p>
+   </div>

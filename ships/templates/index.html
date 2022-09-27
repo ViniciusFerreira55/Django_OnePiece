@@ -14,9 +14,9 @@
         <div class="navbar">
             <ul>
                 <li><a href="{% url 'index' %}">Home</a></li>
-                <li><a>News</a></li>
-                <li><a>Contact</a></li>
-                <li><a>About</a></li>
+                <li><a href="#personagens">Personagens</a></li>
+                <li><a href="#frutas">Akumas no Mi</a></li>
+                <li><a href="#navios">Navios</a></li>
               </ul>
         </div>
     </header>
@@ -33,7 +33,8 @@
     </div>    
     </div>
     <div class="lanca">
-        <h1>Conheça os Personagens da Obra</h1>
+        <a id="personagens"></a>
+        <h1>Conheça os Personagens da Obra</h1> 
    <div class="copao">
         <div class="char">
         {% for character in characters%}
@@ -50,7 +51,8 @@
     </div>
     </div>
     <div class="lanca">
-        <h1>Akumas no Mi</h1>
+        <a id="frutas"></a>
+        <h1>Akumas no Mi</h1>     
    <div class="copao">
         <div class="char">
         {% for akumaNoMi in akumaNoMis %}
@@ -67,7 +69,8 @@
     </div>
     </div>
     <div class="lanca">
-        <h1>Navios</h1>
+        <a id="navios"></a>
+        <h1>Navios</h1>      
    <div class="copao">
         <div class="char">
         {% for navio in navios %}
@@ -83,9 +86,5 @@
     </div>
     </div>
     </div>
-    
-    
-
-
 </body>
 </html>

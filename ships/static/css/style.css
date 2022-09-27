@@ -6,12 +6,16 @@
 }
 
 body{
-    background-color: aqua;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 21%, rgba(0,212,255,1) 67%);
 
 }
 .navbar{
     background-color: black;
     color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 
@@ -28,6 +32,8 @@ body{
     height: 500px;
     width: 500px;
     margin-left: 35px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50px 20px;
 }
 
 h1{
@@ -100,6 +106,7 @@ a{
     height: 700px;
     display: block;
     margin: 30px auto;
+    
 }
 
 .info_char{
