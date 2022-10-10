@@ -13,7 +13,6 @@ body{
 .navbar{
     background-color: black;
     color: white;
-    position: fixed;
     width: 100%;
     top: 0;
 }
@@ -27,6 +26,14 @@ body{
     justify-content: space-between;
 }
 
+
+.seta1{
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+    border: 10px;
+    position: fixed;
+}
 
 .fotos{
     height: 500px;
