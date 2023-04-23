@@ -1,0 +1,116 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css'  %}">
+    <title>One piece </title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a>News</a></li>
+                <li><a>Contact</a></li>
+                <li><a>About</a></li>
+              </ul>
+        </div>
+    </header>
+   
+    <div class="text">
+        <h1>Conheça o universo de one piece</h1>
+        <div class="logo2">
+         <img src="{% static './img/logo.png'  %}" alt="onePiece" class="logo">
+        </div>
+        <div class="para">
+        <p>One Piece segue a história de um grupo de piratas liderado por Monkey D. Luffy.</p>
+        <p> O garoto, que possui um corpo elástico, pretende se tornar o Rei dos Piratas e para isso deve encontrar o One Piece, tesouro misterioso capaz de torná-lo imbatível, segundo as lendas.</p>
+        <p> Os Piratas do Chapéu de Palha, como é conhecido o grupo, acabam vivendo momentos extremamente memoráveis. One Piece consegue unir bem temas como família, perda e perseguição de sonhos, resultando em uma obra mundialmente aclamada.</p>
+    </div>    
+    </div>
+    <div class="lanca">
+        <h1>Conheça os Personagens da Obra</h1>
+   <div class="copao">
+        <div class="char">
+        {% for character in characters%}
+        <div class="char2">
+            <div class="grow">
+            <a href="{% url 'character' character.id %}">
+            <h5>{{character.nome_personagem}}</h5>
+            <img src="/media/{{character.foto}}" alt="zimbas" class="fotos">
+        </a>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+    </div>
+    <div class="lanca">
+        <h1>Akumas no Mi</h1>
+   <div class="copao">
+        <div class="char">
+        {% for akumaNoMi in akumaNoMis %}
+        <div class="char2">
+            <div class="grow">
+            <a href="{% url 'akumaNoMi' akumaNoMi.id %}">
+            <h5>{{akumaNoMi.nome_akuma}}</h5>
+            <img src="/media/{{akumaNoMi.foto_akuma}}" alt="zimbas" class="fotos">
+        </a>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+    </div>
+    
+    <div class="lanca">
+        <h1>Navios</h1>
+        <div class="container">
+            <div class="copao">
+                <div class="char">
+                    {% for navio in navios %}
+                    <div class="char2">
+                        <div class="grow">
+                            <a href="{% url 'navio' navio.id %}">
+                                <h5>{{navio.nome_navio}}</h5>
+                                <img src="/media/{{navio.foto_navio}}" alt="zimbas3" class="fotos">
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+    
+            <div class="copao">
+                <div class="char">
+                    {% for navio in navios %}
+                    <div class="char2">
+                        <div class="grow">
+                            <a href="{% url 'navio' navio.id %}">
+                                <h5>Going Merry</h5>
+                                <img src="media/Going_Merry_Original.jpg" alt="zimbas3" class="fotos">
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+   
+    </div>
+    
+    
+
+
+</body>
+</html>
