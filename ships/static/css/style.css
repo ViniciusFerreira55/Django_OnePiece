@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: aqua;
+
+}
+.navbar{
+    background-color: black;
+    color: white;
+}
+
+
+.navbar ul {
+    display: flex;
+    padding: 1rem;
+    list-style: none;
+    margin: 0;
+    justify-content: space-between;
+}
+
+
+.fotos{
+    height: 500px;
+    width: 500px;
+    margin-left: 35px;
+}
+
+
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.text p1{
+    align-items: center;
+}
+
+.logo{
+    height: 500px;
+    width: 1000px;
+    display: flex;
+
+}
+.logo2 {
+    display: flex;
+    justify-content: center;
+}
+
+.char {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.char2 {
+    padding: 10px;
+}
+
+.char2 h5{
+    text-align: center;
+    font-size: 30px;
+}
+
+.para{
+    text-align: center;
+    font-size: 30px;
+
+}
+
+.grow:hover
+{
+     -webkit-transform: scale(1.3);
+     -ms-transform: scale(1.3);
+     transform: scale(1.3);
+}
+
+.lanca{
+    margin-top: 70px;
+}
+
+	  
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+.copao{
+    display: inline-block;
+    margin-top: 70px;
+    margin-left: 105px;
+    display: inline-block;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar a{
+    color: white;
+}
+
+.fotosI{
+    width: 700px;
+    height: 700px;
+    display: block;
+    margin: 30px auto;
+}
+
+.info_char{
+    text-align: center;
+}
+
+.descricao{
+    text-align: center;
+    margin: 0 50px 100px 50px;
+    font-size: 22px;
+}
