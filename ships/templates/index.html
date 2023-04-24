@@ -1,3 +1,5 @@
+
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css'  %}">
-    <title>One piece </title>
+    <link rel="shortcut icon" href="../static/img/favicon.png" type="image/x-icon">
+    <title>One Piece </title>
 </head>
 
 <body>
@@ -14,9 +17,9 @@
         <div class="navbar">
             <ul>
                 <li><a href="{% url 'index' %}">Home</a></li>
-                <li><a>News</a></li>
-                <li><a>Contact</a></li>
-                <li><a>About</a></li>
+                <li><a href="#personagens">Personagens</a></li>
+                <li><a href="#frutinhas">Frutas</a></li>
+                <li><a href="#navio">Navios</a></li>
               </ul>
         </div>
     </header>
@@ -33,6 +36,7 @@
     </div>    
     </div>
     <div class="lanca">
+        <a id="personagens"></a>
         <h1>Conheça os Personagens da Obra</h1>
    <div class="copao">
         <div class="char">
@@ -50,6 +54,7 @@
     </div>
     </div>
     <div class="lanca">
+        <a id="frutinhas"></a>
         <h1>Akumas no Mi</h1>
    <div class="copao">
         <div class="char">
@@ -66,28 +71,51 @@
     </div>
     </div>
     </div>
-    <div class="lanca">
-        <h1>Navios</h1>
-   <div class="copao">
-        <div class="char">
-        {% for navio in navios %}
-        <div class="char2">
-            <div class="grow">
-            <a href="{% url 'navio' navio.id %}">
-            <h5>{{navio.nome_navio}}</h5>
-            <img src="/media/{{navio.foto_navio}}" alt="zimbas3" class="fotos">
-        </a>
-        </div>
-        </div>
-        {% endfor %}
-    </div>
-    </div>
-    </div>
     
+    <div class="lanca">
+        <a id="navios"></a>
+        <h1>Navios</h1>
+        <div class="container">
+            <div class="copao">
+                <div class="char">
+                    {% for navio in navios %}
+                    <div class="char2">
+                        <div class="grow">
+                            <a href="{% url 'navio' navio.id %}">
+                                <h5>{{navio.nome_navio}}</h5>
+                                <img src="/media/{{navio.foto_navio}}" alt="zimbas3" class="fotos">
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+    
+            <div class="copao">
+                <div class="char">
+                    {% for navio in navios %}
+                    <div class="char2">
+                        <div class="grow">
+                            <a href="{% url 'navio' navio.id %}">
+                                <h5>Going Merry</h5>
+                                <img src="media/Going_Merry_Original.jpg" alt="zimbas3" class="fotos">
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
     
 
     <footer>
         Copyright 2023 © - OnePiece™ 
     </footer>
+=======
+
+   
+    </div>
+    
 </body>
 </html>
