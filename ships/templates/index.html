@@ -1,3 +1,5 @@
+
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -69,23 +71,46 @@
     </div>
     </div>
     </div>
+    
     <div class="lanca">
         <a id="navios"></a>
         <h1>Navios</h1>
-   <div class="copao">
-        <div class="char">
-        {% for navio in navios %}
-        <div class="char2">
-            <div class="grow">
-            <a href="{% url 'navio' navio.id %}">
-            <h5>{{navio.nome_navio}}</h5>
-            <img src="/media/{{navio.foto_navio}}" alt="zimbas3" class="fotos">
-        </a>
+        <div class="container">
+            <div class="copao">
+                <div class="char">
+                    {% for navio in navios %}
+                    <div class="char2">
+                        <div class="grow">
+                            <a href="{% url 'navio' navio.id %}">
+                                <h5>{{navio.nome_navio}}</h5>
+                                <img src="/media/{{navio.foto_navio}}" alt="zimbas3" class="fotos">
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+    
+            <div class="copao">
+                <div class="char">
+                    {% for navio in navios %}
+                    <div class="char2">
+                        <div class="grow">
+                            <a href="{% url 'navio' navio.id %}">
+                                <h5>Going Merry</h5>
+                                <img src="media/Going_Merry_Original.jpg" alt="zimbas3" class="fotos">
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
-        </div>
-        {% endfor %}
     </div>
-    </div>
+    
+
+
+   
     </div>
     
 </body>
